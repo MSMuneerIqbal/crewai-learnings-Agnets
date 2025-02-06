@@ -1,0 +1,24 @@
+[project]
+name = "crewai-flows"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "crewai>=0.100.1",
+    "litellm>=1.59.8",
+]
+
+[project.scripts]
+crewai-flows = "crewai_flows:main"
+simpleflow = "crewai_flows.main:kickoff"
+chain-prompt = "crewai_flows.main1:kickoff"
+run2 = "crewai_flows.main2:kickoff"
+plot2 = "crewai_flows.main2:plot"
+run3 = "crewai_flows.main3:run3"
+plot3 = "crewai_flows.main3:plot3"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
