@@ -10,6 +10,7 @@ dependencies = [
 
 [project.scripts]
 manager_agent = "manager_agent.main:main"
+sequential_process = "manager_agent.sequential_process:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
