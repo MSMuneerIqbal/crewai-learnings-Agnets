@@ -1,54 +1,68 @@
-# ManagerAgent Crew
+# CrewAI Project
 
-Welcome to the ManagerAgent Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+A demonstration of CrewAI framework for orchestrating AI agents to work together as a crew.
+
+## Overview
+
+This project demonstrates how to use the CrewAI framework to create a team of AI agents that collaborate to research and produce content about artificial intelligence and AI agents. The crew consists of three agents:
+
+1. **Researcher** - Conducts thorough research on AI topics
+2. **Writer** - Creates compelling content based on research
+3. **Project Manager** - Oversees the crew and ensures high-quality completion of tasks
 
 ## Installation
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
-
-First, if you haven't already, install uv:
-
 ```bash
-pip install uv
+# Clone the repository
+git clone https://github.com/MSMuneerIqbal/crewai-learnings-Agnets/tree/main/manager_agent.git
+cd crewai-project
+
+# Create a virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+
+# Install the required packages
+pip install crewai
 ```
 
-Next, navigate to your project directory and install the dependencies:
+## Usage
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/manager_agent/config/agents.yaml` to define your agents
-- Modify `src/manager_agent/config/tasks.yaml` to define your tasks
-- Modify `src/manager_agent/crew.py` to add your own logic, tools and specific args
-- Modify `src/manager_agent/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+The main script creates a crew with a hierarchical process flow where the Project Manager coordinates the efforts of the Researcher and Writer to complete the assigned task.
 
 ```bash
-$ crewai run
+# Run the script
+python main.py
 ```
 
-This command initializes the manager-agent Crew, assembling the agents and assigning them tasks as defined in your configuration.
+## Project Structure
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+- `main.py` - The main script that defines the agents, tasks, and crew
+- `README.md` - This file
 
-## Understanding Your Crew
+## How It Works
 
-The manager-agent Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+1. The script defines three agents: a Researcher, a Writer, and a Project Manager.
+2. A task is created to generate a list of article ideas about AI and AI agents.
+3. The crew is instantiated with a hierarchical process, with the Project Manager overseeing the Researcher and Writer.
+4. When the script runs, the Manager delegates work to the Researcher and Writer as needed to complete the task.
+5. The final output is a list of 5 article ideas, each with a sample paragraph and notes.
 
-## Support
+## Example Output
 
-For support, questions, or feedback regarding the ManagerAgent Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+The output will include 5 numbered bullet points, each with a captivating paragraph about an AI-related topic and accompanying notes for potential full articles.
 
-Let's create wonders together with the power and simplicity of crewAI.
+## Customization
+
+You can customize this project by:
+- Modifying the agent roles and goals
+- Changing the task description
+- Adding more agents to the crew
+- Creating more complex workflows with additional tasks
+
+## Dependencies
+
+- CrewAI library
+
+## License
+
+[Your chosen license]
