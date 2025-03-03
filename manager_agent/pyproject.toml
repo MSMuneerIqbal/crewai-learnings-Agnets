@@ -1,0 +1,18 @@
+[project]
+name = "manager_agent"
+version = "0.1.0"
+description = "manager-agent using crewAI"
+authors = [{ name = "Muneer", email = "muneeriqbal729@gmail.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+manager_agent = "manager_agent.main:main"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
