@@ -1,0 +1,20 @@
+[project]
+name = "google_search_agent"
+version = "0.1.0"
+description = "google_search_agent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+app = "google_search_agent.main:main"
+app2 = "google_search_agent.main2:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
