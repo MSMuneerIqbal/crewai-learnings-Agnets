@@ -50,7 +50,7 @@ A sophisticated market analysis platform that leverages multiple CrewAI teams wo
   - Goal: Ensure report quality and clarity
   - Tasks: Proofread and refine final reports
 
-## 🔄 Process Flow
+## 🔄 Process Flows
 
 ```mermaid
 graph TD
@@ -73,14 +73,14 @@ graph TD
     end
 ```
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - Python 3.10+
 - CrewAI Framework
 - Markdown for report generation
 - UTF-8 encoding for report handling
 
-## 📋 Project Structure
+## Project Structure
 
 ```
 market-intelligence-system/
